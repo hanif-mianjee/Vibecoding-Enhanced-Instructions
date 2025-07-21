@@ -4,15 +4,16 @@ We are building a [PLACEHOLDER_APP_TYPE] using [PLACEHOLDER_STACK].
 
 ## Key Development Goals:
 1. Follow Test-Driven Development (TDD): Write tests first, then code.
-2. Ensure input validation and proper authentication for all critical paths.
+2. Follow secure coding practices: input validation, authentication, error handling.
 3. Use modular, maintainable code with performance in mind.
 4. Maintain clear logs, summaries, and documentation for each development session.
 5. Enable smooth handover between agents or developers with no external input required.
 
 # 📋 Requirements
-- Use proper folder structure (`/src`, `/tests`, etc.)
+- Use clean and secure code practices.
+- Use proper folder structure (`/src`, `/tests`, etc.) and naming conventions
 - Auto-update `requirements.txt` or `package.json` when new dependencies are added.
-- Write comprehensive unit/integration tests using `pytest` or project-appropriate framework.
+- Unit and integration tests must be written for each feature before implementation.
 - Validate all input, secure all endpoints.
 - Document setup, run, and test instructions in `README.md`.
 - Summarize all progress in `dev-log.txt` and `chat-summary.md`.
@@ -68,6 +69,7 @@ We are building a [PLACEHOLDER_APP_TYPE] using [PLACEHOLDER_STACK].
 You are continuing the development of this application based on the plan in this file. Your tasks are:
 1. Read all instructions and understand the current state.
 2. Pick the next required feature or milestone.
+   - Find its requirement file in the `features/<milestone>` (markdown format with description, acceptance criteria, and other relevant details).
 3. Generate a test-plan for that feature and wait for user review.
 4. Once test plan is approved, implement the feature using TDD.
 5. After completing a step, update the "Current State of Development" section with details.
@@ -76,7 +78,7 @@ You are continuing the development of this application based on the plan in this
 8. Suggest clean and meaningful commit messages.
 
 # 🧪 How to Generate test-plan.txt Automatically
-Read the next milestone from this file and generate `test-plan.txt` with the following format:
+Read the next milestone from this file and generate `test-plan.md` with the following format:
 
 Feature: [Feature Name]
 
