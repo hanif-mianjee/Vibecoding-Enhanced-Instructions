@@ -16,9 +16,10 @@ As experience software engineer you are continuing the development of this proje
 - Skip dependent milestone if prerequisites are incomplete and document the reason.
 - Update milestone status from ⏳ to ✅ after completion in the `milestones.md`.
 - Update milestone status in the file after completion as well.
+- Before marking a milestone complete, verify all documentation, logs, and commit messages are updated.
 
-# 🔧 Plan for the Application
-We are building a [PLACEHOLDER_APP_TYPE] using [PLACEHOLDER_STACK].
+# 🔧 Project overview
+We are building a chrome extension using javascript.
 
 ## Key Development Goals:
 1. Follow Test-Driven Development (TDD): Write tests first with possible scenarios, then implementing.

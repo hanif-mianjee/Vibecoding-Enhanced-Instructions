@@ -17,6 +17,19 @@ def prompt_questions(questions):
                     break
                 else:
                     print("Invalid selection. Please enter a valid number.")
+
+            # For checklist, show yes/no options
+            elif q['key'] == 'milestone_checklist':
+                options = ['yes', 'no']
+                print(f"{q['prompt']} Select one:")
+                for idx, opt in enumerate(options, 1):
+                    print(f"  {idx}. {opt}")
+                choice = input('Enter number: ').strip()
+                if choice.isdigit() and 1 <= int(choice) <= len(options):
+                    answers[q['key']] = options[int(choice)-1]
+                    break
+                else:
+                    print("Invalid selection. Please enter a valid number.")
             else:
                 print(f"{q['prompt']}")
                 answer = input('> ').strip()
@@ -62,6 +75,22 @@ def generate_markdown(data):
     # Status
     md.append(f"## Status\n\n`{data['status']}`\n")
 
+    # Milestone Completion Checklist
+    if data['milestone_checklist'] == 'yes':
+        md.append("---\n")
+        md.append(f"## Milestone Completion Checklist\n")
+        mcc_items = [
+            "Update current-development-state.md with milestone details and next steps",
+            "Update dev-log.txt with milestone summary",
+            "Update chat-summary.md with milestone summary and next steps",
+            "Mark milestone as complete in milestones.md",
+            "Suggest a clean, meaningful commit message"
+        ]
+        acc_content = []
+        acc_content.extend([f"- [ ] {item}" for item in mcc_items])
+        md.extend(acc_content)
+        md.append("\n")
+
     return '\n'.join(md)
 
 def main():
@@ -87,6 +116,9 @@ def main():
 
     # Status
     questions.append({"key": "status", "prompt": "Status (`todo`, `in-progress`, `blocked`, `done`):", "mandatory": True})
+
+    # Milestone Checklist
+    questions.append({"key": "milestone_checklist", "prompt": "Enable milestone checklist? (yes/no):", "mandatory": True})
     
     answers = prompt_questions(questions)
     

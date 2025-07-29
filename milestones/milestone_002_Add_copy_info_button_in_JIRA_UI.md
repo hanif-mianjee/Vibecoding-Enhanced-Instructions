@@ -23,3 +23,13 @@ As the user I want to copy the ticket title, key, and current status in format: 
 ## Status
 
 `todo`
+
+---
+
+## Milestone Completion Checklist
+
+- [ ] Update current-development-state.md with milestone details and next steps
+- [ ] Update dev-log.txt with milestone summary
+- [ ] Update chat-summary.md with milestone summary and next steps
+- [ ] Mark milestone as complete in milestones.md
+- [ ] Suggest a clean, meaningful commit message
