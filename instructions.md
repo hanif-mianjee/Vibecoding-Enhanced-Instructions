@@ -1,41 +1,41 @@
+# 🔁 AI Agent Continuation
+As experience software engineer you are continuing the development of this project based on the plan in this file. Your tasks are:
+1. Read all instructions and understand the current development state from `current-development-state.md` file.
+2. Pick the next required milestore from the `milestones.md` file.
+   - All starts '- ⏳ <milestone title>' are pending milestones. Just pick one.
+   - Find its details files in folder `milestone` (markdown format with description, acceptance criteria, and other relevant details).
+3. Generate a test-plan for that milestone and wait for user review.
+4. Once test plan is approved, implement the feature using TDD.
+5. After completing a step, update the "Current State of Development" with details.
+6. After each round of work, append detail section "What’s Next" with a TODO list for the next agent/developer.
+7. Always document new files, code functions, and design decisions.
+8. Suggest clean and meaningful commit messages.
+
+# 🚦 Milestone Selection Guidelines
+- Implement milestone in the order listed.
+- Skip dependent milestone if prerequisites are incomplete and document the reason.
+- Update milestone status from ⏳ to ✅ after completion in the `milestones.md`.
+- Update milestone status in the file after completion as well.
 
 # 🔧 Plan for the Application
 We are building a [PLACEHOLDER_APP_TYPE] using [PLACEHOLDER_STACK].
 
 ## Key Development Goals:
-1. Follow Test-Driven Development (TDD): Write tests first, then code.
+1. Follow Test-Driven Development (TDD): Write tests first with possible scenarios, then implementing.
 2. Follow secure coding practices: input validation, authentication, error handling.
-3. Use modular, maintainable code with performance in mind.
+3. Use modular, maintainable, remove redundent code, extract functions for similar code.
 4. Maintain clear logs, summaries, and documentation for each development session.
 5. Enable smooth handover between agents or developers with no external input required.
 
 # 📋 Requirements
 - Use clean and secure code practices.
 - Use proper folder structure (`/src`, `/tests`, etc.) and naming conventions
-- Auto-update `requirements.txt` or `package.json` when new dependencies are added.
+- Auto-update dependency files when new dependencies are added.
 - Unit and integration tests must be written for each feature before implementation.
 - Validate all input, secure all endpoints.
 - Document setup, run, and test instructions in `README.md`.
 - Summarize all progress in `dev-log.txt` and `chat-summary.md`.
 - Create clean, meaningful commit messages and stop after each milestone for review.
-
-# ✅ Current State of Development
-- No code exists yet.
-- No files or folders have been created.
-- Agent should begin by creating `README.md`, base folder structure, and dev environment instructions.
-
-## Milestones
-- ⏳ Initial scaffold: folders, README, .gitignore, virtualenv setup
-- ⏳ Feature 1: User authentication
-- ⏳ Feature 2: Secured user profile API
-- ⏳ Feature 3: Admin dashboard
-- ⏳ Feature 4: Public content API
-- ⏳ Final testing, documentation, cleanup
-
-# 🚦 Feature Selection Guidelines
-- Implement features in the order listed.
-- Skip dependent features if prerequisites are incomplete and document the reason.
-- Update milestone status from ⏳ to ✅ after completion.
 
 # 🧱 Project Structure & Naming Conventions
 - Code: `/src`, Tests: `/tests`
@@ -50,12 +50,12 @@ We are building a [PLACEHOLDER_APP_TYPE] using [PLACEHOLDER_STACK].
 - Keep tests isolated and repeatable.
 
 # 📘 Documentation & Logging Rules
-- Update `README.md` if setup, commands, or features change.
+- Update `README.md` if setup, commands, or milestone change.
 - Update `dev-log.txt` after each milestone.
 - Summarize AI chat decisions in `chat-summary.md`.
 
 # 📦 Deployment Readiness
-- Ensure all features are ✅
+- Ensure all milestone are ✅
 - Pass all tests and linters
 - README should be complete
 - Package the code for release
@@ -64,18 +64,6 @@ We are building a [PLACEHOLDER_APP_TYPE] using [PLACEHOLDER_STACK].
 - Log errors clearly with context.
 - Suggest resolution paths if stuck.
 - Don’t patch bugs silently—log them and ask for confirmation.
-
-# 🔁 Reusable Prompt for AI Agent Continuation
-You are continuing the development of this application based on the plan in this file. Your tasks are:
-1. Read all instructions and understand the current state.
-2. Pick the next required feature or milestone.
-   - Find its requirement file in the `features/<milestone>` (markdown format with description, acceptance criteria, and other relevant details).
-3. Generate a test-plan for that feature and wait for user review.
-4. Once test plan is approved, implement the feature using TDD.
-5. After completing a step, update the "Current State of Development" section with details.
-6. Always document new files, code functions, and design decisions.
-7. After each round of work, append a new section in this file titled "What’s Next" with a TODO list for the next agent/developer.
-8. Suggest clean and meaningful commit messages.
 
 # 🧪 How to Generate test-plan.txt Automatically
 Read the next milestone from this file and generate `test-plan.md` with the following format:
