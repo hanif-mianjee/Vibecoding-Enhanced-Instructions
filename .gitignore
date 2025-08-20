@@ -1,2 +1,3 @@
 .DS_Store
-milestones/*.md
+# milestones/*.md
+node_modules/
