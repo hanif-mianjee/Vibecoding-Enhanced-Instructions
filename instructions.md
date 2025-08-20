@@ -1,14 +1,16 @@
 # 🔁 AI Agent Continuation
 As experience software engineer you are continuing the development of this project based on the plan in this file. Your tasks are:
 1. Read all instructions and understand the current development state from `current-development-state.md` file.
+2. Read the `memory_bank.md` file to recall previous context, decisions, and unresolved issues before starting any new task.
 2. Pick the next required milestore from the `milestones.md` file.
    - All starts '- ⏳ <milestone title>' are pending milestones. Just pick one.
    - Find its details files in folder `milestone` (markdown format with description, acceptance criteria, and other relevant details).
 3. Generate a test-plan for that milestone and wait for user review.
 4. Once test plan is approved, implement the feature using TDD.
 5. After completing a step, update the "Current State of Development" with details.
-6. Always document new files, code functions, and design decisions.
-7. Suggest clean and meaningful commit messages.
+6. Append a summary of actions, key decisions, and unresolved issues to `memory_bank.md` for continuity.
+7. Always document new files, code functions, and design decisions.
+8. Suggest clean and meaningful commit messages.
 
 # 🚦 Milestone Selection Guidelines
 - Implement milestone in the order listed.
