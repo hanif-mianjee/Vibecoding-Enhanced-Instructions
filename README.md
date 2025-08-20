@@ -40,8 +40,12 @@ This project uses [Semantic Versioning](https://semver.org/). The current versio
 - Place the `instructions.md` file in the root of your project.
 - Create a `milestones/` folder to store milestone markdown tickets (with descriptions, acceptance criteria, etc.).
 - Use the provided `milestone_generator.py` script to interactively generate milestone files in the `milestones/` folder.
+  - You can create multiple milestones in one session.
+  - At the end, you will be prompted to regenerate the `milestones.md` summary file from all milestone files.
+  - The script `sync_milestones_md.py` is used internally to keep `milestones.md` in sync with the milestone files.
 
-### 2. 📌 Generate Milestone Files
+
+### 2. 📌 Generate Milestone Files & Sync
 
 - Run the `milestone_generator.py` script:
 
@@ -49,8 +53,20 @@ This project uses [Semantic Versioning](https://semver.org/). The current versio
   python milestone_generator.py
   ```
 
-- Answer the interactive prompts to fill in milestone details.
+- You will be prompted to:
+  1. Create one or more milestone files interactively (repeat as needed)
+  2. Optionally regenerate the `milestones.md` summary file from all milestone files at the end
+
 - The script will display the generated markdown in your terminal and save it to the `milestones/` folder.
+- The `milestones.md` file will always reflect the current state of all milestone files, in order.
+
+#### Manual Sync (Advanced)
+
+If you ever need to manually regenerate the summary file, you can run:
+
+```sh
+python sync_milestones_md.py
+```
 
 ### 3. 🚀 Enable Copilot Agent in VS Code
 
@@ -117,8 +133,8 @@ your-project/
 ├── chat-summary.md
 ├── milestone_generator.py
 ├── milestones/
-│   ├── milestone-001-Milestone_Title.md
-│   └── milestone-002-Another_Milestore.md
+│   ├── milestone_001_Milestone_Title.md
+│   └── milestone_002_Another_Milestone.md
 └── src/
     └── ...
 ```
