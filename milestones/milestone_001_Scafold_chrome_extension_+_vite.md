@@ -29,8 +29,4 @@ Scafold chrome extension in src. create basic files and folder structure. use vi
 
 ## Milestone Completion Checklist
 
-- [ ] Update current-development-state.md with milestone details and next steps
-- [ ] Update dev-log.txt with milestone summary
-- [ ] Update chat-summary.md with milestone summary and next steps
-- [ ] Mark milestone as complete in milestones.md
-- [ ] Suggest a clean, meaningful commit message
+- check `dev_checklist.md` in the root for Milestone Completion Checklist

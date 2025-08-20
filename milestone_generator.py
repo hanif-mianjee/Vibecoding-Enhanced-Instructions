@@ -30,6 +30,18 @@ def prompt_questions(questions):
                     break
                 else:
                     print("Invalid selection. Please enter a valid number.")
+            # For checklist, show yes/no options
+            elif q['key'] == 'update_milestones_md':
+                options = ['yes', 'no']
+                print(f"{q['prompt']} Select one:")
+                for idx, opt in enumerate(options, 1):
+                    print(f"  {idx}. {opt}")
+                choice = input('Enter number: ').strip()
+                if choice.isdigit() and 1 <= int(choice) <= len(options):
+                    answers[q['key']] = options[int(choice)-1]
+                    break
+                else:
+                    print("Invalid selection. Please enter a valid number.")
             else:
                 print(f"{q['prompt']}")
                 answer = input('> ').strip()
@@ -79,17 +91,7 @@ def generate_markdown(data):
     if data['milestone_checklist'] == 'yes':
         md.append("---\n")
         md.append(f"## Milestone Completion Checklist\n")
-        mcc_items = [
-            "Update current-development-state.md with milestone details and next steps",
-            "Update dev-log.txt with milestone summary",
-            "Update chat-summary.md with milestone summary and next steps",
-            "Mark milestone as complete in milestones.md",
-            "Suggest a clean, meaningful commit message"
-        ]
-        acc_content = []
-        acc_content.extend([f"- [ ] {item}" for item in mcc_items])
-        md.extend(acc_content)
-        md.append("\n")
+        md.append(f"- check `dev_checklist.md` in the root for Milestone Completion Checklist\n")
 
     return '\n'.join(md)
 
@@ -119,20 +121,23 @@ def main():
 
     # Milestone Checklist
     questions.append({"key": "milestone_checklist", "prompt": "Enable milestone checklist? (yes/no):", "mandatory": True})
-    
+
+    # New: Update milestones.md?
+    questions.append({"key": "update_milestones_md", "prompt": "Add new milestone to milestones.md with pending status? (yes/no):", "mandatory": True})
+
     answers = prompt_questions(questions)
-    
+
     answers['created_on'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    
+
     md_content = generate_markdown(answers)
-    
+
     safe_title = answers['milestone_title'].replace(' ', '_').replace('/', '_')
     filename = f"milestone_{answers['milestone_id']}_{safe_title}.md"
     folder = os.path.join(os.path.dirname(__file__), 'milestones')
-    
+
     os.makedirs(folder, exist_ok=True)
     filepath = os.path.join(folder, filename)
-    
+
     # Add color and formatting for terminal output
     YELLOW = '\033[93m'
     CYAN = '\033[96m'
@@ -152,10 +157,17 @@ def main():
         else:
             print(line)
     print(f"\n{BOLD}{CYAN}========== End Markdown =========={RESET}\n")
-    
+
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(md_content)
     print(f"New milestone generated: {os.path.join('milestones', filename)}")
+
+    # New: Append milestone_title to milestones.md if selected
+    if answers.get('update_milestones_md', '').lower() == 'yes':
+        milestones_md_path = os.path.join(os.path.dirname(__file__), 'milestones.md')
+        with open(milestones_md_path, 'a', encoding='utf-8') as f:
+            f.write(f"\n - ⏳ {answers['milestone_title']}")
+        print(f"milestones.md updated with: {answers['milestone_title']}")
 
 if __name__ == "__main__":
     main()
