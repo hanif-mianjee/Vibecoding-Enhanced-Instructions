@@ -6,7 +6,7 @@ As experience software engineer you are continuing the development of this proje
    - All starts '- ⏳ <milestone title>' are pending milestones. Just pick one.
    - Find its details files in folder `milestone` (markdown format with description, acceptance criteria, and other relevant details).
 3. Generate a test-plan for that milestone and wait for user review.
-4. Once test plan is approved, implement the feature using TDD.
+4. Once test plan is approved, implement the feature using TDD. Test files must include full test logic and assertions for all scenarios before feature implementation. Do not create empty or placeholder tests. Then implement the feature code to make these tests pass
 5. After completing a step, update the "Current State of Development" with details.
 6. Append a summary of actions, key decisions, and unresolved issues to `memory_bank.md` for continuity.
 7. Review and complete all items in `dev_checklist.md` before marking a milestone as done.
