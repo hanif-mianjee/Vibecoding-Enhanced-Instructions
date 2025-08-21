@@ -18,10 +18,11 @@ Scafold chrome extension in src. create basic files and folder structure. use vi
 
 - [ ] Minimun project structure created in src folder with basic informations for a chrome extension and vite configured.
 - [ ] placeholder name and description used in the chrome extension
+- [ ] Review and complete all items in `dev_checklist.md` before marking a milestone as done.
 
 ---
 
-## Status
+## Status ('todo', 'in-progress', 'blocked', 'done')
 
 `todo`
 

@@ -9,8 +9,9 @@ As experience software engineer you are continuing the development of this proje
 4. Once test plan is approved, implement the feature using TDD.
 5. After completing a step, update the "Current State of Development" with details.
 6. Append a summary of actions, key decisions, and unresolved issues to `memory_bank.md` for continuity.
-7. Always document new files, code functions, and design decisions.
-8. Suggest clean and meaningful commit messages.
+7. Review and complete all items in `dev_checklist.md` before marking a milestone as done.
+8. Always document new files, code functions, and design decisions.
+9. Suggest clean and meaningful commit messages.
 
 # 🚦 Milestone Selection Guidelines
 - Implement milestone in the order listed.

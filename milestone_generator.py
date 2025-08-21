@@ -63,6 +63,7 @@ def generate_markdown(data):
     for key, label in zip(ac_fields, ["What should happen", "What should not happen", "Edge case handling", "Performance, security, or UX consideration"]):
         if data.get(key):
             ac_content.append(f"- [ ] {data[key]}")
+    ac_content = ["- [ ] Review and complete all items in `dev_checklist.md` before marking a milestone as done."]
     if ac_content:
         md.append("## Acceptance Criteria\n")
         md.extend(ac_content)
@@ -74,7 +75,7 @@ def generate_markdown(data):
         md.append("---\n")
 
     # Status
-    md.append(f"## Status\n\n`{data['status']}`\n")
+    md.append(f"## Status ('todo', 'in-progress', 'blocked', 'done')\n\n`{data['status']}`\n")
 
     # Milestone Completion Checklist
     if data['milestone_checklist'] == 'yes':
