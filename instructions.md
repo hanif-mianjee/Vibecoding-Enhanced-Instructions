@@ -52,7 +52,7 @@ We are building a chrome extension using javascript.
 # 🧱 Project Structure & Naming Conventions
 - Code: `/src`, Tests: `/tests`
 - Use snake_case for files, camelCase for variables
-- Format with Black or equivalent
+- Format with Prettier/ESLint or Black depending on the best practices
 - Separate logic into modules; reuse utilities
 
 # ✅ TDD Enforcement Rules
