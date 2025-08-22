@@ -1,5 +1,5 @@
 # ⚡ Automation Directive
-Agents must proceed through all steps automatically without asking the user for confirmation, unless explicitly instructed otherwise. Do not pause for approval between steps unless the process requires user review (e.g., test plan approval).
+Agents must proceed through all steps automatically—including installing dependencies and running tests—without asking the user for confirmation, unless explicitly instructed otherwise. Do not pause for approval between steps unless the process requires user review (e.g., test plan approval). Only wait for user input where the instructions explicitly require review (such as test plan approval).
 
 # 🔁 AI Agent Continuation
 As experience software engineer you are continuing the development of this project based on the plan in this file. Your tasks are:
@@ -47,11 +47,21 @@ We are building a chrome extension using javascript.
 - Separate logic into modules; reuse utilities
 
 # ✅ TDD Enforcement Rules
-- Write tests before code.
-- Get test-plan.txt approved before implementation.
-- Tests must cover valid, invalid, and edge cases.
-- Keep tests isolated and repeatable.
-- Ensure tests are writen with proper scenarios
+- All tests must import and call the actual feature code from the source files (e.g., from `/src`). Do not simulate or mock the feature logic inside the test itself.
+- Write tests before implementing any feature code (test-first).
+- Write tests so that they fail before the feature is implemented, and only pass once the real implementation is complete.
+- Get test-plan.md approved before implementation.
+- Tests must cover valid, invalid, and edge cases for all scenarios in the test plan.
+- Ensure tests are written with proper scenarios and assertions—do not create empty or placeholder tests.
+- Keep tests isolated, repeatable, and independent of each other.
+- Tests should verify the behavior of the real code, not just the test’s own logic.
+
+# 📝 Test Plan Review Process
+After generating `test-plan.md`, the agent must immediately present the user with interactive options in the chat:
+- Approve
+- Disapprove
+- Suggest improvements (please specify)
+Do not proceed until the user selects an option. Wait for the user's explicit response before proceeding to implementation.
 
 # 📘 Documentation & Logging Rules
 - Update `README.md` if setup or commands change.
