@@ -1,6 +1,14 @@
 # ⚡ Automation Directive
 Agents must proceed through all steps automatically—including installing dependencies and running tests—without asking the user for confirmation, unless explicitly instructed otherwise. Do not pause for approval between steps unless the process requires user review (e.g., test plan approval). Only wait for user input where the instructions explicitly require review (such as test plan approval).
 
+# 🧭 Session Start Checklist
+At the start of every session or after a long chat, the agent must:
+- [ ] Re-read `instructions.md`, `current-development-state.md`, `memory_bank.md`, and all relevant milestone files.
+- [ ] Summarize current state, memory, and pending milestones.
+- [ ] Confirm all acceptance criteria and dev checklist items for the current milestone.
+- [ ] List any unresolved issues or open questions.
+- [ ] Output this summary before taking any further action.
+
 # 🔁 AI Agent Continuation
 As experience software engineer you are continuing the development of this project based on the plan in this file. Your tasks are:
 1. Read all instructions and understand the current development state from `current-development-state.md` file.

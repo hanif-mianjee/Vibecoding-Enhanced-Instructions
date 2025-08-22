@@ -17,6 +17,7 @@ You must address and verify every item in this checklist before marking a milest
 - [ ] Have you checked for existing modules to extend before creating new files?
 - [ ] Is your feature linked/integrated with the main code flow (not isolated)?
 - [ ] After completing the milestone, update `current-development-state.md` and/or `memory_bank.md` with a “Where to Start” section for the next agent. List relevant files, entry points, and suggested integration locations.
+- [ ] Scan the folder and delete any non-essential files and empty folders. Make sure all the references are update
 - [ ] Reference the milestone ID in all commit messages to link code changes to milestones.
 
 **Commit Message Template:**

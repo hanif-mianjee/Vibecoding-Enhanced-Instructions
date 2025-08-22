@@ -10,7 +10,7 @@
 
 ## Description
 
-Scafold chrome extension in src. create basic files and folder structure. use vite.
+Scafold chrome extension in src. create basic files and folder structure. do not create non-essential files. use vite.
 
 ---
 
