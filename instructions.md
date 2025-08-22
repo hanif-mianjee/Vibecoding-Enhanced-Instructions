@@ -1,3 +1,6 @@
+# ⚡ Automation Directive
+Agents must proceed through all steps automatically without asking the user for confirmation, unless explicitly instructed otherwise. Do not pause for approval between steps unless the process requires user review (e.g., test plan approval).
+
 # 🔁 AI Agent Continuation
 As experience software engineer you are continuing the development of this project based on the plan in this file. Your tasks are:
 1. Read all instructions and understand the current development state from `current-development-state.md` file.
