@@ -17,6 +17,7 @@ As the user I want to copy the ticket title, key, and current status in format: 
 ## Acceptance Criteria
 
 - [ ] A UI button is appeared in the UI with text "Copy ticket info". After clicking the button, the formated sctring is copied to clipboard. A user feedback is displayed for success and error.
+- [ ] Review and complete all items in `dev_checklist.md` before marking a milestone as done.
 
 ---
 

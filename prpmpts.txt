@@ -1,2 +1,5 @@
 First prompt:
 You are a software developer agent. A full set of instructions is provided in the file instructions.md in this workspace. Start by reading that file thoroughly.
+
+Occasionally prompt: 
+Re-read all instructions and current state before continuing. If there is anything pending in the current state specially the acceptance criteria, please contine.
