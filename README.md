@@ -140,3 +140,43 @@ your-project/
 ```
 
 You are now ready to begin! 🎯
+
+---
+
+## 🛠️ Install this template quickly
+
+This repo includes a portable installer script that clones the repo into the current (empty) directory, removes some optional files/folders, and then deletes the installer.
+
+Requirements:
+- Git installed and on PATH
+- A POSIX shell (macOS/Linux, WSL, or Git Bash on Windows)
+
+Quick start:
+
+```sh
+mkdir vibecoding && cd vibecoding
+curl -fsSL https://raw.githubusercontent.com/hanif-mianjee/Vibecoding-Enhanced-Instructions/feature/installable/install.sh | sh
+```
+
+Or with wget:
+
+```sh
+mkdir vibecoding && cd vibecoding
+wget -qO- https://raw.githubusercontent.com/hanif-mianjee/Vibecoding-Enhanced-Instructions/feature/installable/install.sh | sh
+```
+
+What the installer does:
+- Verifies the directory is writable, empty, and not already a Git repo
+- Clones this repo into the directory
+- Removes a hardcoded list of paths (you can override via `PRUNE_LIST`)
+- Deletes the installer file
+
+Customization:
+- Use a different source by setting `REPO_URL`: `REPO_URL=https://github.com/yourUser/yourFork.git sh`
+- Override deletion list via `PRUNE_LIST` (newline-separated):
+
+```sh
+PRUNE_LIST="coverage\nmilestones" curl -fsSL https://raw.githubusercontent.com/hanif-mianjee/Vibecoding-Enhanced-Instructions/feature/installable/install.sh | sh
+```
+
+Windows users: Run the commands in Git Bash or WSL. The default Windows Command Prompt (cmd.exe) won't execute `sh` pipelines.
