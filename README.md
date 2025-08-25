@@ -2,9 +2,9 @@
 
 This guide walks you through how to use GitHub Copilot (Agent Mode) with the included `instructions.md` file to begin and manage your project effectively.
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)
 
-**Current Version:** `0.1.0`
+**Current Version:** `0.2.0`
 
 ---
 
